@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="auth.cs">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" href="./assets/game.png" type="image/x-icon" />
 </head>
+
 <body>
     <nav class="navbar">
-        <div class="logo">MY STORE NAME</div>
+        <div class="logo">Game<span class="hight-light">store</span><a href=""></a></div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -16,7 +21,7 @@
             <li><a href="#">Contact</a></li>
         </ul>
         <div class="auth-buttons" id="auth-buttons">
-            <a href="./register/register.html" class="register-button">Register</a>
+            <a href="./register/register.html"class="register-button">Register</a>
             <a href="./login/login.html" class="login-button">Login</a>
         </div>
         <div class="user-infor" id="user-infor" style="display: none;">
@@ -25,9 +30,29 @@
             <a href="" class="user-button" id="logout-button">Logout</a>
         </div>
     </nav>
-    
-    <div id="products-container"></div>
-    
+
+    <div class="wellcome-section">
+
+        <video class="hero-bg" autoplay muted loop playsinline>
+            <source
+                src="https://shared.fastly.steamstatic.com/store_item_assets/steam/clusters/seasonalsales/510eefba7ced02981bca521c/webm_page_bg_english.webm?t=1765401325"
+                type="video/webm">
+            <!-- Optional fallback -->
+        </video>
+    </div>
+
+    <div id="products-container"
+        style="
+        width: 100%;
+        padding: 10px 40px;
+        display: flex;
+        flex-wrap: wrap;  /* QUAN TRỌNG */
+        gap: 40px;
+    ">
+    </div>
+
+
+
     <!-- Firebase config -->
     <script src="https://www.gstatic.com/firebasejs/11.4.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth-compat.js"></script>
@@ -36,4 +61,5 @@
     <script src="firebase-config.js"></script>
     <script src="index.js"></script>
 </body>
+
 </html>
