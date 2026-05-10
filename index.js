@@ -124,7 +124,7 @@ function loadProducts() {
         productElement.classList.add("product");
 
         productElement.innerHTML = `
-                <img src="${product.image}">
+                <img class="img-product" src="${product.image}">
                 <p>Name: ${product.name}</p>
                 <p>Price: ${product.price} VND</p>
                 <button class="add-to-cart-btn">Add to cart</button>

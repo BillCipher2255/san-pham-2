@@ -1,0 +1,127 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #020617, #000000);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Cart container */
+#cart-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Cart item */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(0, 183, 255, 0.25);
+    border-radius: 15px;
+    padding: 15px;
+
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.cart-item:hover {
+    transform: scale(1.02);
+    border-color: #00b7ff;
+    box-shadow: 0 0 15px rgba(0, 183, 255, 0.3);
+}
+
+/* Image */
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Text */
+.cart-item p {
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+/* Quantity buttons */
+.quantity-btn {
+    background: #00b7ff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.quantity-btn:hover {
+    background: #0095d9;
+}
+
+/* Remove button */
+.remove-btn {
+    background: #ff3b3b;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.remove-btn:hover {
+    background: #ff1f1f;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+/* Total price */
+#total-price {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #00b7ff;
+}
+
+/* Checkout button */
+#checkout-button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #00b7ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#checkout-button:hover {
+    background: #0095d9;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 183, 255, 0.4);
+}
+
+/* Empty text */
+#cart-container p {
+    text-align: center;
+    color: #aaa;
+}
