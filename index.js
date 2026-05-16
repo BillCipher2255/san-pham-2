@@ -41,9 +41,9 @@ function updateProductOnCart(productId) {
                     } else {
                         cartItemRef.set({
                           productId: productId,
-                          name: product.name,
-                          price: product.price,
-                          image: product.image,
+                          name: productData.name,
+                          price: productData.price,
+                          image: productData.image,
                           quantity: 1,
                           addedAt: firebase.firestore.FieldValue.serverTimestamp()
                         })
@@ -73,7 +73,7 @@ function addToCart(productId) {
     let productData = productDoc.data();
     let cartItemRef = db
       .collection("carts")
-      .doc(user.id)
+      .doc(user.uid)
       .collection("items")
       .doc(productId);
 
@@ -94,12 +94,12 @@ function addToCart(productId) {
         else {
             // Nếu sản phẩm chưa có trong giỏ hàng, thêm mới
             cartItemRef.set({
-                productId: productId,
-                name: productData.name,
-                price: productData.price,
-                image: productData.image,
-                quantity: 1,
-                addedAt: firebase.firestore.FieldValue.serverTimestamp()
+              productId: productId,
+              name: productData.name,
+              price: productData.price,
+              image: productData.image,
+              quantity: 1,
+              addedAt: firebase.firestore.FieldValue.serverTimestamp()
             })
             .then(() => alert("Sản phẩm đã được thêm vào giỏ hàng"))
             .catch((error) => console.error(error))

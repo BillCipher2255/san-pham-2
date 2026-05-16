@@ -16,7 +16,7 @@
         <div class="logo">Game<span class="hight-light">store</span><a href=""></a></div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -45,9 +45,14 @@
         style="
         width: 100%;
         padding: 10px 40px;
-        display: flex;
-        flex-wrap: wrap;  /* QUAN TRỌNG */
-        gap: 40px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1200px; /* Bạn có thể tăng giảm tùy độ rộng màn hình mong muốn */
+        margin: 0 auto; 
+        padding: 40px
+        
+        
     ">
     </div>
 
